@@ -18,7 +18,8 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh './jenkins/scripts/deliver.sh'
+                dir("workspace/Github-pipeline"){
+                sh './jenkins/scripts/deliver.sh'}
             }
         }
         stage("Completed"){
