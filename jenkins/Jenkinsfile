@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Deliver') {
     steps {
-        dir(target){
+        dir({$Worksapce}){
         sh './jenkins/scripts/deliver.sh target/my-app.jar'}
     }
 }
