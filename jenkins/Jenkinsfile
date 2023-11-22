@@ -22,8 +22,8 @@ pipeline {
         }
         stage('Deliver') {
     steps {
-        dir({$Worksapce}){
-        sh './jenkins/scripts/deliver.sh target/my-app.jar'}
+        
+        sh 'java -jar /var/jenkins_home/workspace/Github-pipeline/target/my-app-1.0-SNAPSHOT.jar'
     }
 }
 
